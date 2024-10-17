@@ -48,10 +48,12 @@ footer{
     background-color:#CDB599FF ;
 }
 .home-title{
-    color:black
+    color:black;
+    text-align: center;
 }
 h4{
     color: black;
+    text-align: center;
 }
 .msg h2{
     color:black ;
