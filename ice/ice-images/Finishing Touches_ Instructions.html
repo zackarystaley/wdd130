@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://byui-wdd.github.io/wdd130/activities/w07-final-touches.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Finishing Touches: Instructions</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="./Finishing Touches_ Instructions_files/prism-light.css">
+  <link href="./Finishing Touches_ Instructions_files/course.css" rel="stylesheet">
+<style>.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #0000ff;
+  --rdp-background-color: #e7edff;
+  --rdp-accent-color-dark: #3003e1;
+  --rdp-background-color-dark: #180270;
+  --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+  --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75); /* Outline border for focused _and_ selected elements */
+
+  margin: 1em;
+}
+
+/* Hide elements for devices that are not screen readers */
+.rdp-vhidden {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute !important;
+  top: 0;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  border: 0 !important;
+}
+
+/* Buttons */
+.rdp-button_reset {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  color: inherit;
+  outline: none;
+  background: none;
+  font: inherit;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.rdp-button {
+  border: 2px solid transparent;
+}
+
+.rdp-button[disabled] {
+  opacity: 0.25;
+}
+
+.rdp-button:not([disabled]) {
+  cursor: pointer;
+}
+
+.rdp-button:focus:not([disabled]),
+.rdp-button:active:not([disabled]) {
+  color: inherit;
+  border: var(--rdp-outline);
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-months {
+  display: flex;
+}
+
+.rdp-month {
+  margin: 0 1em;
+}
+
+.rdp-month:first-child {
+  margin-left: 0;
+}
+
+.rdp-month:last-child {
+  margin-right: 0;
+}
+
+.rdp-table {
+  margin: 0;
+  max-width: calc(var(--rdp-cell-size) * 7);
+  border-collapse: collapse;
+}
+
+.rdp-with_weeknumber .rdp-table {
+  max-width: calc(var(--rdp-cell-size) * 8);
+  border-collapse: collapse;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  text-align: left;
+}
+
+.rdp-multiple_months .rdp-caption {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.rdp-caption_dropdowns {
+  position: relative;
+  display: inline-flex;
+}
+
+.rdp-caption_label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 0.25em;
+  white-space: nowrap;
+  color: currentColor;
+  border: 0;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.rdp-nav {
+  white-space: nowrap;
+}
+
+.rdp-multiple_months .rdp-caption_start .rdp-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-multiple_months .rdp-caption_end .rdp-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-nav_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  padding: 0.25em;
+  border-radius: 100%;
+}
+
+/* ---------- */
+/* Dropdowns  */
+/* ---------- */
+
+.rdp-dropdown_year,
+.rdp-dropdown_month {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rdp-dropdown {
+  appearance: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+  opacity: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.rdp-dropdown[disabled] {
+  opacity: unset;
+  color: unset;
+}
+
+.rdp-dropdown:focus:not([disabled]) + .rdp-caption_label,
+.rdp-dropdown:active:not([disabled]) + .rdp-caption_label {
+  border: var(--rdp-outline);
+  border-radius: 6px;
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-dropdown_icon {
+  margin: 0 0 0 5px;
+}
+
+.rdp-head {
+  border: 0;
+}
+
+.rdp-head_row,
+.rdp-row {
+  height: 100%;
+}
+
+.rdp-head_cell {
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+}
+
+.rdp-tbody {
+  border: 0;
+}
+
+.rdp-tfoot {
+  margin: 0.5em;
+}
+
+.rdp-cell {
+  width: var(--rdp-cell-size);
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+  text-align: center;
+}
+
+.rdp-weeknumber {
+  font-size: 0.75em;
+}
+
+.rdp-weeknumber,
+.rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  font-weight: bold;
+}
+
+.rdp-day_selected:not([disabled]),
+.rdp-day_selected:focus:not([disabled]),
+.rdp-day_selected:active:not([disabled]),
+.rdp-day_selected:hover:not([disabled]) {
+  color: white;
+  background-color: var(--rdp-accent-color);
+}
+
+.rdp-day_selected:focus:not([disabled]) {
+  border: var(--rdp-outline-selected);
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp-day_range_end.rdp-day_range_start {
+  border-radius: 100%;
+}
+
+.rdp-day_range_middle {
+  border-radius: 0;
+}
+</style></head>
+
+<body>
+  <div id="content">
+    <header class="headerBanner">
+      <div>
+        <h1><span>WEB</span> Fundamentals</h1>
+        <h2>WDD 130</h2>
+      </div>
+    </header>
+    <main>
+      <h1>Layout the Home Page</h1>
+      <hr>
+      <h2>Activity&nbsp;Instructions</h2>
+      <p>Estimated Time: 90 minutes.</p>
+      <div class="callout">
+        <p>
+          This activity will use the following CSS concepts or properties
+          (review the links if you do not remember these):
+        </p>
+        <ul>
+          <li>
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Complete guide to CSS
+              Grid</a>
+            or
+            <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">W3Schools CSS Grid</a>
+          </li>
+          <li>
+            <a href="http://www.w3schools.com/cssref/pr_margin.asp" target="_blank">Margin</a>
+          </li>
+          <li>
+            <a href="http://www.w3schools.com/cssref/pr_padding.asp" target="_blank">Padding</a>
+          </li>
+          <li>
+            <a href="http://www.w3schools.com/css/css_combinators.asp" target="_blank">CSS Descendant Selectors</a>
+          </li>
+          <li>
+            <a href="http://www.w3schools.com/cssref/pr_dim_line-height.asp" target="_blank">CSS Line-height</a>
+          </li>
+          <li>
+            <a href="http://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">CSS pseudo classes</a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        We have made a lot of improvements to our page over the last few
+        weeks. This week we finally take on the layout. After we finish the
+        layout of our page, it should look very similar to the wireframe and
+        will be close to complete.
+      </p>
+      <div class="callout">
+        <p>
+          Review again the
+          <a href="https://byui-wdd.github.io/wdd130/rafting_images/wireframe_home.png" target="_blank">wireframe</a>
+          for the rafting site.
+        </p>
+        <p>We will be creating three grids for this home page. One in the header, one for the hero portion, and one for the
+          main portion.</p>
+        <p>We will also be creating two simple flexbox layouts for the nav links and the footer.</p>
+      </div>
+      <div class="fig-block">
+        <figure>
+          <img alt="Example Grids" width="50%" src="./Finishing Touches_ Instructions_files/home_grid.png" style="display: block; margin-left: auto; margin-right: auto;" title="Example Grids">
+        </figure>
+      </div>
+      <div class="callout">
+        <p>
+          The instructions below are expecting a certain structure in your
+          HTML to work. If you followed the instructions in the
+          <a href="https://byui-wdd.github.io/wdd130/activities/w03-getting-started.html" target="_blank">Getting Started</a>
+          activity you should have it. Let's start with the header. It should look similar to the
+          following:
+        </p>
+        <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo_link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Dry Oar Logo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Page 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site-plan-rafting.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Site Plan<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>contactus.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Contact Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+</code> </pre>
+        <p>
+          Make any changes necessary to have yours match what is above. (HTML
+          only. Your images and text can be different.)
+        </p>
+      </div>
+      <ol class="bigSteps">
+        <li>
+          <h3>Header Grid</h3>
+          <p>The header wireframe with grid looks like this:</p>
+          <div class="fig-block">
+            <figure>
+              <img alt="Example Header Grid" width="70%" src="./Finishing Touches_ Instructions_files/header_grid.png" style="display: block; margin-left: auto; margin-right: auto;" title="Example Header Grid">
+            </figure>
+          </div>
+          <p>
+            <code>&lt;header&gt;</code> will be the parent or grid container. It has two children: the
+            <code>&lt;a&gt;</code> that surrounds our logo and the <kbd>nav</kbd> element. They are the only grid items
+            we will be able to place in our grid. It will be a simple two-column, one-row grid.
+          </p>
+          <p>
+            Add the <kbd>display: grid;</kbd> declaration to the <kbd>header</kbd> selector. Set up the
+            <kbd>grid-template-columns</kbd> giving the two column values of <kbd>150px</kbd> and <kbd>auto</kbd>. This
+            gives <kbd>150px</kbd> to the logo
+            and the rest of available space to the navigation.</p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">header</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 150px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            The two children will fill up the first row automatically in the right order. We don't need to explicitly
+            place them.</p>
+          <p>
+            We could do another nested grid for the nav links, but let's try flex-box instead.</p>
+          <p>
+            Add a rule set that looks like this:</p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">nav</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            There are many ways to align flexbox items. Go here to see the different ways to align flexbox items: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#justify-content" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/#justify-content</a></p>
+          <p>
+            For the last part of the layout for the header, let's center the logo vertically and horizontally with
+            <kbd>justify-self: center</kbd> and <kbd>align-self: center.</kbd></p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#logo_link</span> <span class="token punctuation">{</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">justify-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+        </li>
+        <li>
+          <h3>Hero Grid</h3>
+          <div class="callout">
+            <p>
+              The HTML for the hero should look similar to this:
+            </p>
+            <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero-box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/hero.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>People enjoying white water rafting<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero-msg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>home-title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Have An Adventure<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>Make Memories with Dry Oar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button-box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>book<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rates.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Book Now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+            </code> </pre>
+            <p>
+              Again, you may have a different image or text.
+            </p>
+          </div>
+          <p>
+            For the next grid, the <code>&lt;div&gt;</code> with the id of <kbd>hero</kbd> will be the grid container,
+            or parent.
+            The two children are the <code>&lt;div&gt;</code> with the id of <kbd>hero-box</kbd> containing the image,
+            and the
+            <code>&lt;section&gt;</code> with the id of <kbd>hero-msg</kbd> containing the text and button that goes
+            over the
+            image.
+          </p>
+          <p>The hero wireframe with grid looks like this:</p>
+          <div class="fig-block">
+            <figure>
+              <img alt="Example Hero Grid" width="70%" src="./Finishing Touches_ Instructions_files/hero_grid.png" style="display: block; margin-left: auto; margin-right: auto;" title="Example Hero Grid">
+            </figure>
+          </div>
+
+          <p>
+            Because we want the text message and button to take about 60% of the <kbd>width</kbd> we could use five
+            fractions and have
+            it take three of those five fractions. We could use <kbd>repeat(5, 1fr)</kbd> and have it span over three columns or we
+            could use
+            <kbd>1fr 3fr 1fr</kbd>. We will also implicitly use two rows so the message is near the top of the image in
+            the first
+            row. The hero image will cover the entire grid.
+          </p>
+          <p>
+            Set up the grid for the hero portion by adding the <kbd>display: grid</kbd> and <kbd>grid-template-columns:
+              1fr 3fr 1fr</kbd>.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 3fr 1fr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            The children get implicitly placed into the first and second spots on the grid. This is not what we had
+            planned, so we need to explicitly place them.
+          </p>
+          <p>
+            Place the <code>&lt;div&gt;</code> with the id of <kbd>hero-box</kbd> across the entire grid. Spanning
+            column lines 1–4 and
+            row lines 1–3.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero-box</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> 1/4<span class="token punctuation">;</span>
+    <span class="token property">grid-row</span><span class="token punctuation">:</span> 1/3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            Place the <code>&lt;section&gt;</code> with the id of <kbd>hero-msg</kbd> to spanning column lines 2–3
+            and row lines
+            1–2. Try it without a code example this time.
+          </p>
+          <p>
+            Notice certain text colors may not be easy to see now since their background has changed. For example, my <code>&lt;h4&gt;</code> text was black so it was hard to read over the dark
+            image. I would change the font color to white. Check your text and see if you need to change any colors to have a better contrast.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero-msg h4</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+        </li>
+        <li>
+          <h3>Overlap hero with navigation</h3>
+          <p>
+            If we want our hero image to overlap with the navigation while still leaving the navigation layout the same
+            for other pages of our website, we can use a negative top margin on our <code>&lt;div&gt;</code> with the id
+            of <kbd>hero</kbd>. Add a <kbd>margin-top</kbd> of <kbd>-100px</kbd>. This will push the hero image over the
+            navigation by <kbd>100px</kbd>.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 3fr 1fr<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> -100px<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            We also need to push the hero text and button down by the same measurement so it doesn't go over the top of
+            the navigation menu. Add a top margin of <kbd>100px</kbd> to <kbd>#hero-msg</kbd>.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero-msg</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> 2/3<span class="token punctuation">;</span>
+    <span class="token property">grid-row</span><span class="token punctuation">:</span> 1/2<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            It seems as if the header disappeared. That's because the hero image has overlapped it. Set a
+            <kbd>z-index</kbd> of <kbd>-1</kbd>
+            to the <kbd>#hero-box</kbd> to send it back a layer on the <kbd>z-axis</kbd>.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">#hero-box</span> <span class="token punctuation">{</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> 1/4<span class="token punctuation">;</span>
+    <span class="token property">grid-row</span><span class="token punctuation">:</span> 1/3<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+            <p>
+              The reason we overlapped the image with the header is because you may have used a rgba opacity with the header background color and changing the top margins lets the image show through a bit. If you decided not to use any opacity in your background color of your header, your header may look different than the example at the bottom of the assignment. You may even wish to skip the overlapping step if you wish.
+            </p>
+        </li>
+        <li>
+          <h3>Main Grid</h3>
+          <p>
+            The <code>&lt;main&gt;</code> portion of our page will have a grid with many more columns and rows. It will
+            encompass all the rest of the page minus the footer.
+          </p>
+          <p>The main wireframe with grid looks like this:</p>
+          <div class="fig-block">
+            <figure>
+              <img alt="Example Main Grid" width="70%" src="./Finishing Touches_ Instructions_files/main_grid.png" style="display: block; margin-left: auto; margin-right: auto;" title="Example Main Grid">
+            </figure>
+          </div>
+          <p>
+            The HTML for the <code>&lt;main&gt;</code> portion of the page should look similar to this:
+          </p>
+          <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>home-grid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rivers-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/rivers.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>river in forest<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/river_icon.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>river icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Rivers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>camping-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/camping.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tent in mountains<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/fire_icon.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fire icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Camping<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rapids-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card-img<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/rapids.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rafting boat<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/oars.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>oars icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Rapids<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>background<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mountains<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/mountains.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Misty mountains<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>More Than Just The Thrill<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>join<span class="token punctuation">'</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rivers.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Join Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+            </code> </pre>
+          <p>
+            The parent container will be the <code>&lt;main&gt;</code> element with the class of <kbd>home-grid</kbd>.
+            It will have
+            10 equal columns.
+          </p>
+          <p>
+            The children are the three card <code>&lt;section&gt;</code> elements, the <code>&lt;div&gt;</code> with the id
+            of
+            <kbd>background</kbd>, the <code>&lt;img&gt;</code> with the class of <kbd>mountains</kbd>, and the
+            <code>&lt;section&gt;</code> with the
+            class of <kbd>msg</kbd>.
+          </p>
+          <div class="callout">
+            <p>
+              Remember, grids can be constructed either <em>explicitly</em>: you define
+              everything about the grid, column number and widths, row number
+              and heights, and where every item should be placed, or
+              <em>implicitly</em>: you let the browser make as many of the
+              decisions as possible. Most grids are a mix of both. All grids
+              need to have some columns defined, but after that, the browsers
+              will <em>implicitly</em> create rows as needed.
+            </p>
+            <p>
+              If you review the 'Layout with grid lines' image above, you will
+              see that the rows are not all the same height. You may have been
+              wondering how you are to know how big to make each row? I'll let
+              you in on a little secret: you don't have to know in many cases.
+              You can often let the browser figure it out!
+            </p>
+          </div>
+          <p>
+            Let's give our <code>&lt;main&gt;</code> with the class of <kbd>home-grid</kbd> the <kbd>display: grid</kbd>
+            declaration and the
+            <kbd>grid-template-columns</kbd> an equal 10 fractions.
+          </p>
+          <p>
+            You will see that because the images are large, they make the columns very large as well. Let's make sure
+            that the images with the classes <kbd>card-img</kbd> and <kbd>mountains</kbd> have a <kbd>width</kbd> of
+            <kbd>100%</kbd>. As they get placed in the grid, they
+            will take up 100% of the space they are given.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">.card-img, .mountains</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            Place each of the children as follows:
+          </p>
+          <p>
+            <kbd>.rivers-card</kbd> from column lines 2–4 and row lines 2–3
+          </p>
+          <p>
+            <kbd>.camping-card</kbd> from column lines 5–7 and row lines 2–3
+          </p>
+          <p>
+            <kbd>.rapids-card</kbd> from column lines 8–10 and row lines 2–3
+          </p>
+          <p>
+            <kbd>#background</kbd> from column lines 1–11 and row lines 4–9
+          </p>
+          <p>
+            <kbd>.mountains</kbd> from column lines 2–7 and row lines 5–8
+          </p>
+          <p>
+            <kbd>.msg</kbd> from column lines 6–10 and row lines 6–7
+          </p>
+
+        </li><li>
+          <h3>Footer Layout</h3>
+          <p>The footer HTML should look something like this:</p>
+          <pre class=" language-markup"><code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Dry Oar © 20XX - Your First and Last Name Here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site-plan-rafting.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Site Plan<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>contactus.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Contact Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>social<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://facebook.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/facebook.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fb icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://twitter.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/twitter.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>twitter icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://instagram.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/instagram.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>instagram icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span>
+            </code> </pre>
+          <p>
+            Let's use flex-box for our footer as well. With <kbd>display: flex</kbd>, <kbd>justify-content: space-around</kbd>, and <kbd>align-items:
+              center</kbd>:</p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">footer</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #6f7364<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 25px 50px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> 
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+        </code> </pre>
+        </li>
+
+        <li>
+          <!-- start step -->
+          <h3>Enhancements</h3>
+          <p>
+            At this point, your site is mostly done. There are a few things that could
+            be done to dress it up a bit though.
+          </p>
+          <p>
+            First, let's add a fun hover effect on each of our card images. This involves using some properties we
+            haven't seen yet. You can learn more about them here: <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">https://www.w3schools.com/css/css3_transitions.asp</a>
+            We are adding a half-second transition on our images. The transition happens when the user hovers over the
+            images. At that point, the transform property makes the image 110% bigger, and it appears 40% transparent.
+          </p>
+          <p>
+            Add a shadow to the image with <kbd>box-shadow</kbd>. Learn more about <kbd>box-shadow</kbd> at: <a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.asp" target="_blank">https://www.w3schools.com/cssref/css3_pr_box-shadow.asp</a>.
+            The four values describe the horizontal and vertical offset, the blur, and the color of the shadow. You can use
+            a gray or black or a darker color from your color palette.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">.card-img</span> <span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 10px solid #d9c2a3<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> transform .5s<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 5px 5px 10px #6f7364<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.card-img:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> .6<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+          <p>
+            Also add a <kbd>box-shadow</kbd> to the classes <kbd>mountains</kbd> and <kbd>msg</kbd>.
+          </p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token selector">.msg</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #6f7364<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> 6/10<span class="token punctuation">;</span>
+    <span class="token property">grid-row</span><span class="token punctuation">:</span> 6/7<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 5px 5px 10px #6f7364<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.mountains</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> 2/7<span class="token punctuation">;</span>
+    <span class="token property">grid-row</span><span class="token punctuation">:</span> 5/8<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 5px 5px 10px #6f7364<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+            </code> </pre>
+        </li>
+        <li>
+          <!-- start step -->
+          <h3>Responsive Design</h3>
+          <p>
+            Nearly there. Congratulations on making it this far! Your page
+            should be looking great in the browser on your laptop. What does
+            it look like on a smaller screen like a mobile phone, though?
+            Reduce the width of your browser window to see. It doesn't look great.
+            <em>Responsive design</em> is a process that most web designers
+            apply to their sites to make them look great on a wide variety of
+            screen sizes. One of the key parts to a responsive design is a
+            <kbd>@media</kbd> query. These let us change our CSS based on the
+            width of the browser window and other things as well.
+          </p>
+          <p>
+            For example, we can make our page responsive by adding a media query to it. Copy and paste the following to
+            the
+            <strong>bottom</strong> of your CSS:
+          </p>
+          <p>Media queries always need to be after all the other CSS. Don't add any CSS after the media query later
+            either.</p>
+          <pre class=" language-css"><code class=" language-css">
+<span class="token atrule"><span class="token rule">@media</span> screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 900px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">#hero, .home-grid</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">nav, footer</span> <span class="token punctuation">{</span>
+        <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">nav a</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">#hero</span> <span class="token punctuation">{</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">#hero-msg</span> <span class="token punctuation">{</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">#hero-msg h4</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">#hero-msg h1</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #6f7364<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.home-title</span> <span class="token punctuation">{</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.rivers-card, .camping-card, .rapids-card</span> <span class="token punctuation">{</span> 
+        <span class="token property">margin</span><span class="token punctuation">:</span> 50px auto<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 60%<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">#background</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.mountains, .msg</span> <span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 80%<span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">footer</span> <span class="token punctuation">{</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </code></pre>
+          <p>
+            This could be read as follows: "If the max width of the screen gets smaller
+            than 900px, then use this CSS instead of what you may have seen
+            above" for these selectors.
+          </p>
+          <p>
+            This CSS will not go into effect unless the screen is less than 900px;
+          </p>
+          <p>
+            Some grids were turned off with <kbd>display: block</kbd>, and the flex-boxes were changed from rows to
+            columns. The rest is all minor adjustments to make it look good on the smaller screen.
+          </p>
+          <p>You may notice <kbd>display: none</kbd> was used on a few selectors to make them disappear. Those elements
+            weren't necessary, and not having them on a smaller screen makes it look less cluttered.</p>
+          <!-- end step -->
+        </li>
+        <li>
+          <!-- start step -->
+          <h3>Check, validate, and submit</h3>
+          <p>
+            Preview your site to make sure the webpage displays correctly.
+            Once verified, submit the URL for your page to I-Learn.&nbsp;
+          </p>
+          <div class="callout">
+            <p>
+              Make sure to validate the
+              <a target="_blank" href="https://validator.w3.org/#validate_by_input">
+                HTML</a>
+              and
+              <a target="_blank" href="http://jigsaw.w3.org/css-validator/#validate_by_input">CSS</a> of your page and
+              fix any errors that show.
+            </p>
+          </div>
+          <p>Here is what the finished home page might look like:</p>
+          <img src="./Finishing Touches_ Instructions_files/w07_home.jpg" alt="sample html home page" style="width: 60%">
+          <p>Here is what the finished home page might look like on a smaller device:</p>
+          <img src="./Finishing Touches_ Instructions_files/w07_home-res.jpg" alt="sample html home page" style="width: 30%">
+          <!-- end step -->
+        </li>
+      </ol>
+    </main>
+  </div>
+  <!-- end #article -->
+  <script src="./Finishing Touches_ Instructions_files/course.js"></script>
+  <script src="./Finishing Touches_ Instructions_files/prism.js"></script>
+
+
+
+</body></html>
