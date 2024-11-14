@@ -185,6 +185,51 @@ box-shadow: 5px 5px 10px black;
     opacity: .6;
     transform: scale(1.1);
 }
+
+/* rivers css */
+
+.river-grid{
+    display:grid;
+    grid-template-columns: (1fr,1fr);
+    gap: 50px;
+    margin: 50px;
+}
+  .titler{
+    grid-column: 1/3;
+    text-align: center;
+  }
+  .river1img{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+  }
+  #river1p{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .river2img{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+  }
+  #river2p{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+.river3img{
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 100%;
+  height: 100%;
+}
+#river3p{
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
