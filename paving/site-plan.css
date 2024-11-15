@@ -15,15 +15,15 @@ Fonts are separated by a | */
   --paragraph-font: Timmana, San-Serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #396E94  ;
-  --nav-link-color: #396E94;
-  --nav-background-color: #D4AC0D;
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
+  --headline-color-on-white: #8e651f;  /* headlines on a white background */ 
+  --headline-color-on-color: #c7bcaf; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #767b6c; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #c7bcaf; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #8e651f  ;
+  --nav-link-color: #8e651f;
+  --nav-background-color: #767b6c;
+  --nav-hover-link-color: #c7bcaf;
+  --nav-hover-background-color: #8e651f;
 }
 
 
