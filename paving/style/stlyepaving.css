@@ -74,13 +74,13 @@ nav a:hover {
 }
 
 #ppg1 {
-    width: 100%;
+    width: 90%;
     font-family: "Timmana", sans-serif;
     font-size: 30px;
     color: #767b6c; 
     line-height: 1.8;
     padding: 20px;
-    background-color: #c7bcaf; 
+    background-color: #c7bcaf;
     border-radius: 10px;
 
 }
