@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Timmana&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    font-family: "Timmana", sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: black; 
+}
+
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8e651f;
+    padding: 10px 20px;
+}
+
+#logo_link img {
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+nav a:hover {
+    color: #c7bcaf;
+}
+
+.pavingpg1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center; 
+}
+
+.titlepg1 {
+    margin-bottom: 20px;
+}
+
+.titlepg1 h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 48px;
+    color: #8e651f; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pavingpg1-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.pavingimg1 {
+    width: 50%;
+    height: auto;
+}
+
+#ppg1 {
+    width: 100%;
+    font-family: "Timmana", sans-serif;
+    font-size: 30px;
+    color: #767b6c; 
+    line-height: 1.8;
+    padding: 20px;
+    background-color: #c7bcaf; 
+    border-radius: 10px;
+
+}
+
+footer {
+    background-color: #8e651f; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #c7bcaf; 
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+.social a {
+    margin: 0 10px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
