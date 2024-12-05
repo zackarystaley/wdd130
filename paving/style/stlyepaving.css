@@ -3,7 +3,7 @@
 body {
     font-family: "Timmana", sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #c7bcaf;
     color: black; 
 }
 
@@ -81,8 +81,6 @@ nav a:hover {
     line-height: 1.8;
     padding: 20px;
     background-color: #c7bcaf;
-    border-radius: 10px;
-
 }
 
 footer {
@@ -116,5 +114,50 @@ footer a:hover {
 }
 /* Who we are css*/
 .pavingpg2{
-    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.titlepg2{
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 40px;
+    color: #8e651f; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    grid-column: 1/3;
+}
+.pavingimgpg21{
+    grid-column: 1/2;
+    width: 90%;
+    padding: 20px;
+    align-items: center;
+    padding-bottom: 40px;
+}
+#ppg21{
+    grid-column: 2/3;
+    width: 90%;
+    font-family: "Timmana", sans-serif;
+    font-size: 110%;
+    color: #767b6c; 
+    line-height: 1.8;
+    padding: 20px;
+    text-align: center;
+    padding: 10%;
+}
+.pavingimgpg22{
+    width:90%;
+    padding: 20px;
+    align-items: center;
+    padding-bottom: 70px;
+}
+#ppg22{
+    width: 90%;
+    font-family: "Timmana", sans-serif;
+    font-size: 110%;
+    color: #767b6c; 
+    line-height: 1.8;
+    padding: 20px;
+    text-align: center;
+    padding: 10%;
 }
