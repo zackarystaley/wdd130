@@ -23,7 +23,7 @@ header {
 }
 
 #logo_link img {
-    height: 50px;
+    height: 100px;
 }
 
 nav a {
@@ -44,6 +44,7 @@ nav a:hover {
     align-items: center;
     padding: 20px;
     text-align: center; 
+    padding-bottom: 50px;
 }
 
 .titlepg1 {
@@ -76,7 +77,7 @@ nav a:hover {
 #ppg1 {
     width: 90%;
     font-family: "Timmana", sans-serif;
-    font-size: 131%;
+    font-size: 195%;
     color: #767b6c; 
     line-height: 1.8;
     padding: 20px;
@@ -160,4 +161,92 @@ footer a:hover {
     padding: 20px;
     text-align: center;
     padding: 10%;
+}
+
+/*contact us*/
+
+form {
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    text-align: center;
+    width: 500px;
+    margin: 80px auto;
+
+  }
+  
+  p + p {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    min-width: 90px;
+    text-align: right;
+  }
+  
+  input,
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, text areas have a monospace font */
+    font: 1em sans-serif;
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    /* Match form field borders */
+    border: 1px solid #999;
+    padding: 5px;
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Set the outline width and style */
+    outline-style: solid;
+    /* To give a little highlight on active elements */
+    outline-color: #000;
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+    /* Provide space to type some text */
+    height: 5em;
+  }
+  
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: 0.5em;
+    padding: 10px;
+    font-size: 120%;
+    border-radius: 10px;
+  }
+  #feedback {
+    background-color: #c7bcaf; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;      
+    font-family: "Timmana", sans-serif;
+    color: #767b6c; 
+    font-size: 195%;
+}
+.moveDown {
+    margin-top: 3em;
+}
+#ppg3{
+    font-family: "Timmana", sans-serif;
+    font-size: 195%;
+    color: #767b6c; 
+    text-align: center;
 }
